@@ -4,11 +4,8 @@ import { schema } from './schema';
 
 
 
-const { Turn, Turno, Customer, Car } = initSchema(schema);
+const { Turno } = initSchema(schema);
 
 export {
-  Turn,
-  Turno,
-  Customer,
-  Car
+  Turno
 };
