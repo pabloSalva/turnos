@@ -7,9 +7,9 @@
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
-export declare type SwitchfieldonProps = React.PropsWithChildren<Partial<FlexProps> & {
-    property1?: "Default" | "press";
+export declare type BotonguadarProps = React.PropsWithChildren<Partial<FlexProps> & {
+    estados?: "Default" | "Press";
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function Switchfieldon(props: SwitchfieldonProps): React.ReactElement;
+export default function Botonguadar(props: BotonguadarProps): React.ReactElement;

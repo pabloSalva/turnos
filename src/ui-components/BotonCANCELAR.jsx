@@ -10,30 +10,24 @@ import {
   getOverrideProps,
   getOverridesFromVariants,
 } from "@aws-amplify/ui-react/internal";
-import { Flex, View } from "@aws-amplify/ui-react";
-export default function Switchfieldon(props) {
+import { Flex, Text } from "@aws-amplify/ui-react";
+export default function BotonCANCELAR(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: {
-        "Flex.Flex[0].View[0]": {},
-        "Flex.Flex[0].View[1]": {},
-        "Flex.Flex[0]": {},
-        Flex: {},
-      },
-      variantValues: { property1: "Default" },
+      overrides: { "Flex.Flex[0].Text[0]": {}, "Flex.Flex[0]": {}, Flex: {} },
+      variantValues: { estados: "Default" },
     },
     {
       overrides: {
-        "Flex.Flex[0].View[0]": {
+        "Flex.Flex[0].Text[0]": { color: "rgba(255,255,255,1)" },
+        "Flex.Flex[0]": {
           backgroundColor:
-            "rgba(63.999996185302734,169.83334600925446,191.00000381469727,1)",
+            "rgba(4.000000236555934,125.00000014901161,149.00000631809235,0.4000000059604645)",
         },
-        "Flex.Flex[0].View[1]": { left: "50%", right: "6.25%" },
-        "Flex.Flex[0]": {},
         Flex: {},
       },
-      variantValues: { property1: "press" },
+      variantValues: { estados: "Press" },
     },
   ];
   const mergeVariantsAndOverrides = (variants, overrides) => {
@@ -59,45 +53,44 @@ export default function Switchfieldon(props) {
   );
   return (
     <Flex
-      gap="10px"
-      direction="column"
-      justifyContent="center"
-      alignItems="center"
+      gap="0"
+      direction="row"
+      alignItems="flex-start"
       position="relative"
-      padding="16px 24px 16px 24px"
+      padding="0px 0px 0px 0px"
       {...rest}
       {...getOverrideProps(overrides, "Flex")}
     >
       <Flex
-        padding="0px 0px 0px 0px"
-        width="32px"
-        height="18px"
+        gap="0"
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
         shrink="0"
+        height="34px"
         position="relative"
+        borderRadius="4px"
+        padding="8px 12px 8px 12px"
+        backgroundColor="rgba(4.000000236555934,125.00000014901161,149.00000631809235,0)"
         {...getOverrideProps(overrides, "Flex.Flex[0]")}
       >
-        <View
-          position="absolute"
-          top="0%"
-          bottom="0%"
-          left="0%"
-          right="0%"
-          borderRadius="16px"
+        <Text
+          fontFamily="Inter"
+          fontSize="14px"
+          fontWeight="700"
+          color="rgba(4.000000236555934,125.00000014901161,149.00000631809235,1)"
+          lineHeight="18px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="flex-start"
+          letterSpacing="0.41000000000000003px"
+          shrink="0"
+          position="relative"
           padding="0px 0px 0px 0px"
-          backgroundColor="rgba(0,0,0,0.4000000059604645)"
-          {...getOverrideProps(overrides, "Flex.Flex[0].View[0]")}
-        ></View>
-        <View
-          position="absolute"
-          top="11.11111111111111%"
-          bottom="11.11111111111111%"
-          left="9.375%"
-          right="46.875%"
-          borderRadius="16px"
-          padding="0px 0px 0px 0px"
-          backgroundColor="rgba(255,255,255,1)"
-          {...getOverrideProps(overrides, "Flex.Flex[0].View[1]")}
-        ></View>
+          children="CANCELAR"
+          {...getOverrideProps(overrides, "Flex.Flex[0].Text[0]")}
+        ></Text>
       </Flex>
     </Flex>
   );

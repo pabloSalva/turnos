@@ -7,7 +7,7 @@
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
-export declare type FiltroProps = React.PropsWithChildren<Partial<ViewProps> & {
+export declare type TopbarProps = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function Filtro(props: FiltroProps): React.ReactElement;
+export default function Topbar(props: TopbarProps): React.ReactElement;

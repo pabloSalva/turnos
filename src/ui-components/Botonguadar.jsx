@@ -10,28 +10,24 @@ import {
   getOverrideProps,
   getOverridesFromVariants,
 } from "@aws-amplify/ui-react/internal";
-import { Flex } from "@aws-amplify/ui-react";
-export default function List(props) {
+import { Flex, Text } from "@aws-amplify/ui-react";
+export default function Botonguadar(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { "Flex.Flex[0].Flex[0]": {}, "Flex.Flex[0]": {}, Flex: {} },
-      variantValues: { estados: "listdefault" },
+      overrides: { "Flex.Flex[0].Text[0]": {}, "Flex.Flex[0]": {}, Flex: {} },
+      variantValues: { estados: "Default" },
     },
     {
       overrides: {
-        "Flex.Flex[0].Flex[0]": {},
+        "Flex.Flex[0].Text[0]": {},
         "Flex.Flex[0]": {
-          position: "absolute",
           backgroundColor:
-            "rgba(177.0000046491623,204.00000303983688,235.0000011920929,0.15000000596046448)",
-          top: "0%",
-          bottom: "0%",
-          left: "calc(50% - 177.5px - 0px)",
+            "rgba(4.000000236555934,125.00000014901161,149.00000631809235,0.4000000059604645)",
         },
-        Flex: { width: "355px", height: "168px" },
+        Flex: {},
       },
-      variantValues: { estados: "listpress" },
+      variantValues: { estados: "Press" },
     },
   ];
   const mergeVariantsAndOverrides = (variants, overrides) => {
@@ -58,9 +54,8 @@ export default function List(props) {
   return (
     <Flex
       gap="0"
-      direction="column"
-      justifyContent="center"
-      alignItems="center"
+      direction="row"
+      alignItems="flex-start"
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
@@ -68,30 +63,34 @@ export default function List(props) {
     >
       <Flex
         gap="0"
-        direction="column"
-        height="168px"
+        direction="row"
         justifyContent="center"
+        alignItems="center"
         shrink="0"
-        width="355px"
+        height="34px"
         position="relative"
-        borderRadius="16px 16px 16px 16px"
-        padding="16px 16px 16px 16px"
-        backgroundColor="rgba(255,255,255,1)"
+        borderRadius="4px"
+        padding="8px 12px 8px 12px"
+        backgroundColor="rgba(4.000000236555934,125.00000014901161,149.00000631809235,1)"
         {...getOverrideProps(overrides, "Flex.Flex[0]")}
       >
-        <Flex
-          gap="10px"
+        <Text
+          fontFamily="Inter"
+          fontSize="14px"
+          fontWeight="700"
+          color="rgba(255,255,255,1)"
+          lineHeight="18px"
+          textAlign="left"
+          display="flex"
           direction="column"
-          width="323px"
-          height="134px"
-          justifyContent="center"
-          alignItems="center"
+          justifyContent="flex-start"
+          letterSpacing="0.41000000000000003px"
           shrink="0"
-          overflow="hidden"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0]")}
-        ></Flex>
+          children="GUARDAR"
+          {...getOverrideProps(overrides, "Flex.Flex[0].Text[0]")}
+        ></Text>
       </Flex>
     </Flex>
   );

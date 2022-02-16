@@ -6,21 +6,22 @@
 
 /* eslint-disable */
 import React from "react";
-import { Turno } from "../models";
+import { Turn } from "../models";
 import {
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
+import Listado from "./Listado";
 import { Collection } from "@aws-amplify/ui-react";
-export default function TurnoCollection(props) {
-  const { turno, items: itemsProp, overrides: overridesProp, ...rest } = props;
+export default function ListadoCollection(props) {
+  const { turn, items: itemsProp, overrides: overridesProp, ...rest } = props;
   const overrides = { ...overridesProp };
   const items =
     itemsProp !== undefined
       ? itemsProp
       : useDataStoreBinding({
           type: "collection",
-          model: Turno,
+          model: Turn,
         }).items;
   return (
     <Collection
@@ -32,11 +33,11 @@ export default function TurnoCollection(props) {
       {...getOverrideProps(overrides, "Collection")}
     >
       {(item, index) => (
-        <Turno
-          turno={item}
+        <Listado
+          turn={item}
           key={item.id}
-          {...getOverrideProps(overrides, "Collection.Turno[0]")}
-        ></Turno>
+          {...getOverrideProps(overrides, "Collection.Listado[0]")}
+        ></Listado>
       )}
     </Collection>
   );

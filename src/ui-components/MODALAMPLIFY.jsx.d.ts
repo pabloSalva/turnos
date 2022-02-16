@@ -8,8 +8,6 @@ import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type MODALAMPLIFYProps = React.PropsWithChildren<Partial<ViewProps> & {
-    estado?: "Default";
-} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function MODALAMPLIFY(props: MODALAMPLIFYProps): React.ReactElement;

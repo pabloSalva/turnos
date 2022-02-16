@@ -66,7 +66,9 @@ export default function Botondashboard(props) {
       width="120px"
       height="55px"
       position="relative"
+      boxShadow="0px -1px 2px rgba(0, 0, 0, 0.10000000149011612)"
       padding="0px 0px 0px 0px"
+      backgroundColor="rgba(255,255,255,1)"
       {...rest}
       {...getOverrideProps(overrides, "View")}
     >

@@ -6,10 +6,8 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type ListProps = React.PropsWithChildren<Partial<FlexProps> & {
-    estados?: "listdefault" | "listpress";
-} & {
+import { ViewProps } from "@aws-amplify/ui-react";
+export declare type MODALAMPLIFY2Props = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function List(props: ListProps): React.ReactElement;
+export default function MODALAMPLIFY2(props: MODALAMPLIFY2Props): React.ReactElement;

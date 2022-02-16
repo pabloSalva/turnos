@@ -1,18 +1,17 @@
-import { Flex } from "@aws-amplify/ui-react";
-import { TurnoCollection, Turno } from "./ui-components";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import routes from "./router/routes";
+import HomePage from "./pages/Home";
+import EditPage from "./pages/EditPage";
 
 function App() {
   return (
-    <Flex justifyContent={"center"}>
-      <Turno
-        overrides={{
-          "View.SwitchField[0]": {
-            defaultChecked: false,
-          },
-        }}
-      />
-      <TurnoCollection />
-    </Flex>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/editar" element={<EditPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -5,13 +5,14 @@
  **************************************************************************/
 
 import React from "react";
-import { Turno } from "../models";
+import { Turn } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { CollectionProps } from "@aws-amplify/ui-react";
-export declare type TurnoCollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
-    turno?: Turno;
-    items?: any[];
+import { ViewProps } from "@aws-amplify/ui-react";
+export declare type WhatsapProps = React.PropsWithChildren<Partial<ViewProps> & {
+    turn?: Turn;
+} & {
+    property1?: "cargado" | "sin datos";
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function TurnoCollection(props: TurnoCollectionProps): React.ReactElement;
+export default function Whatsap(props: WhatsapProps): React.ReactElement;

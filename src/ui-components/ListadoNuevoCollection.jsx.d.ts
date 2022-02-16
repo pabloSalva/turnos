@@ -5,9 +5,13 @@
  **************************************************************************/
 
 import React from "react";
+import { Turn } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { ViewProps } from "@aws-amplify/ui-react";
-export declare type Listfinal01Props = React.PropsWithChildren<Partial<ViewProps> & {
+import { CollectionProps } from "@aws-amplify/ui-react";
+export declare type ListadoNuevoCollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+    turn?: Turn;
+    items?: any[];
+} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function Listfinal01(props: Listfinal01Props): React.ReactElement;
+export default function ListadoNuevoCollection(props: ListadoNuevoCollectionProps): React.ReactElement;

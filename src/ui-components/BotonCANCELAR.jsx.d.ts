@@ -5,12 +5,11 @@
  **************************************************************************/
 
 import React from "react";
-import { Turno } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { ViewProps } from "@aws-amplify/ui-react";
-export declare type TurnoProps = React.PropsWithChildren<Partial<ViewProps> & {
-    turno?: Turno;
+import { FlexProps } from "@aws-amplify/ui-react";
+export declare type BotonCANCELARProps = React.PropsWithChildren<Partial<FlexProps> & {
+    estados?: "Default" | "Press";
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function Turno(props: TurnoProps): React.ReactElement;
+export default function BotonCANCELAR(props: BotonCANCELARProps): React.ReactElement;

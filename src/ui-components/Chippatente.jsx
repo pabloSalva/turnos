@@ -53,8 +53,8 @@ export default function Chippatente(props) {
         gap="10px"
         position="absolute"
         top="calc(50% - 14px - 0px)"
-        left="0%"
-        right="0%"
+        left="2.525252525252525%"
+        right="2.525252525252525%"
         direction="row"
         justifyContent="center"
         alignItems="center"
@@ -66,7 +66,7 @@ export default function Chippatente(props) {
         <Text
           fontFamily="Inter"
           fontSize="16px"
-          fontWeight="700"
+          fontWeight="400"
           color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
           lineHeight="20px"
           textAlign="left"
@@ -77,7 +77,7 @@ export default function Chippatente(props) {
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
-          children="En espera"
+          children="AB981DU"
           {...getOverrideProps(overrides, "View.Flex[0].Text[0]")}
         ></Text>
       </Flex>

@@ -7,25 +7,25 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Button, Text, View } from "@aws-amplify/ui-react";
-export default function MODALAMPLIFY(props) {
+import { Flex, Text, View } from "@aws-amplify/ui-react";
+export default function MODALAMPLIFY2(props) {
   const { overrides: overridesProp, ...rest } = props;
   const overrides = { ...overridesProp };
   return (
     <View
-      width="289px"
-      height="145px"
+      width="280px"
+      height="139px"
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
       {...getOverrideProps(overrides, "View")}
     >
       <View
+        width="280px"
+        height="139px"
         position="absolute"
-        top="0%"
-        bottom="0%"
-        left="0%"
-        right="0%"
+        top="0px"
+        left="0px"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "View.View[0]")}
       >
@@ -52,10 +52,10 @@ export default function MODALAMPLIFY(props) {
           ></View>
           <View
             padding="0px 0px 0px 0px"
-            width="289px"
-            height="67.3214340209961px"
+            width="280px"
+            height="64.53571319580078px"
             position="absolute"
-            top="77.6785659790039px"
+            top="74.46428680419922px"
             left="0px"
             {...getOverrideProps(overrides, "View.View[0].View[0].View[1]")}
           >
@@ -106,40 +106,74 @@ export default function MODALAMPLIFY(props) {
             children="¿Confirma la llegada de Volkswagen Golf 2.1 GTI &#xA;Placa AB981DU?"
             {...getOverrideProps(overrides, "View.View[0].View[0].Text[0]")}
           ></Text>
+          <Flex
+            gap="0"
+            position="absolute"
+            top="90px"
+            left="172px"
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            borderRadius="4px"
+            padding="8px 12px 8px 12px"
+            backgroundColor="rgba(4.000000236555934,125.00000014901161,149.00000631809235,1)"
+            {...getOverrideProps(overrides, "View.View[0].View[0].Flex[0]")}
+          >
+            <Text
+              fontFamily="Inter"
+              fontSize="14px"
+              fontWeight="700"
+              color="rgba(255,255,255,1)"
+              lineHeight="18px"
+              textAlign="left"
+              display="flex"
+              direction="column"
+              justifyContent="flex-start"
+              letterSpacing="0.41000000000000003px"
+              shrink="0"
+              position="relative"
+              padding="0px 0px 0px 0px"
+              children="ACEPTAR"
+              {...getOverrideProps(
+                overrides,
+                "View.View[0].View[0].Flex[0].Text[0]"
+              )}
+            ></Text>
+          </Flex>
+          <Flex
+            gap="0"
+            position="absolute"
+            top="90px"
+            left="89px"
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            padding="8px 12px 8px 12px"
+            {...getOverrideProps(overrides, "View.View[0].View[0].Flex[1]")}
+          >
+            <Text
+              fontFamily="Inter"
+              fontSize="14px"
+              fontWeight="700"
+              color="rgba(4.000000236555934,125.00000014901161,149.00000631809235,1)"
+              lineHeight="18px"
+              textAlign="left"
+              display="flex"
+              direction="column"
+              justifyContent="flex-start"
+              letterSpacing="0.41000000000000003px"
+              shrink="0"
+              position="relative"
+              padding="0px 0px 0px 0px"
+              children="SALIR"
+              {...getOverrideProps(
+                overrides,
+                "View.View[0].View[0].Flex[1].Text[0]"
+              )}
+            ></Text>
+          </Flex>
         </View>
       </View>
-      <Button
-        gap="0"
-        position="absolute"
-        padding="8px 12px 8px 12px"
-        display="flex"
-        top="62.06896551724138%"
-        bottom="14.482758620689657%"
-        left="63.32179930795848%"
-        right="4.1522491349480966%"
-        width="94px"
-        height="34px"
-        size="small"
-        variation="primary"
-        children="ACEPTAR"
-        {...getOverrideProps(overrides, "View.Button[0]")}
-      ></Button>
-      <Button
-        gap="0"
-        position="absolute"
-        padding="8px 12px 8px 12px"
-        display="flex"
-        top="62.06896551724138%"
-        bottom="14.482758620689657%"
-        left="35.6401384083045%"
-        right="41.17647058823529%"
-        width="67px"
-        height="34px"
-        size="small"
-        variation="link"
-        children="SALIR"
-        {...getOverrideProps(overrides, "View.Button[1]")}
-      ></Button>
     </View>
   );
 }

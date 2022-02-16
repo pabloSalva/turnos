@@ -5,11 +5,12 @@
  **************************************************************************/
 
 import React from "react";
+import { Turno } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
-export declare type SwitchfieldonProps = React.PropsWithChildren<Partial<FlexProps> & {
-    property1?: "Default" | "press";
+export declare type UnidadDescripcionProps = React.PropsWithChildren<Partial<FlexProps> & {
+    turno?: Turno;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function Switchfieldon(props: SwitchfieldonProps): React.ReactElement;
+export default function UnidadDescripcion(props: UnidadDescripcionProps): React.ReactElement;
